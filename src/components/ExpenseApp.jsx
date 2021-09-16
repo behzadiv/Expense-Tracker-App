@@ -2,11 +2,15 @@ import { useState } from "react";
 import OverWiewComponent from "./OverWiewComponent";
 
 const ExpenseApp = () => {
-    const[balance,setBalance]=useState(0)
+    
     const[income,setIncome]=useState(0)
     const[expense,setExpense]=useState(0)
+    const[trasactions,setTransactions]=useState([])
+    const addTransactionHandler=()=>{
+        console.log("ok");
+    }
     return ( 
-        <OverWiewComponent balance={balance} income={income} expense={expense} />
+        <OverWiewComponent income={income} expense={expense} onAddTransaction2={addTransactionHandler}/>
      );
 }
  
