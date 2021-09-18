@@ -9,6 +9,8 @@ const ExpenseApp = () => {
     const addTransactionHandler=(formValue)=>{
        const data = {...formValue , id: Date.now()}
        setTransactions([...trasactions,data])
+       if(formValue.type ==="income")setIncome(JSON.parse(formValue.amount)+JSON.parse(income))
+       else setExpense(JSON.parse(formValue.amount)+JSON.parse(expense))
     }
     return ( 
         <div>

@@ -3,7 +3,7 @@ const TranactionComponent = ({trasactions}) => {
     return ( 
         <section>
             
-            {trasactions.map(transaction=><TransactionList transaction={transaction}/>)}
+            {trasactions.map(transaction=><TransactionList key={transaction.id} transaction={transaction}/>)}
         </section>
      );
 }

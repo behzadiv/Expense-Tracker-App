@@ -11,12 +11,20 @@ const TransactionForm = ({ onAddTransaction }) => {
   };
   //console.log(type);
   const submitHandler = (e) => {
+    // const cost =formValue.amount.split("")
+    // console.log(cost);
+    
     e.preventDefault();
+    //if(!formValue.desc || cost[0]==="0") return alert("please enter subject and 0 is not acceptable")
+    if(!formValue.desc) return alert("please enter subject")
     onAddTransaction(formValue);
+    setFormValue({ type: "expense",
+    desc: "",
+    amount: 0})
   };
   return (
     <form onSubmit={submitHandler}>
-      <input type="text" name="desc" onChange={changeHandler} value={formValue.desc} />
+      <input type="text" name="desc" onChange={changeHandler} value={formValue.desc} placeholder="subject..." />
       <input type="number" name="amount" onChange={changeHandler} value={formValue.amount} />
       <div>
         <input
