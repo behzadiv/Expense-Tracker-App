@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TransactionForm from "./TransactionForm"
 import TranactionComponent from "./TranactionComponent"
-const OverWiewComponent = ({income , expense ,onAddTransaction2,trasactions}) => {
+const OverWiewComponent = ({income , expense ,onAddTransaction2,transactions,deleteTransaction}) => {
     const[isShow ,setIsShow]=useState(false)
     console.log(isShow);
     return ( 
@@ -15,7 +15,7 @@ const OverWiewComponent = ({income , expense ,onAddTransaction2,trasactions}) =>
                 <h2>Expense <span>{expense}</span></h2>
                 <h2>Income <span>{income}</span></h2>
             </div>
-            <TranactionComponent trasactions={trasactions}/>
+            <TranactionComponent transactions={transactions} deleteTransaction={deleteTransaction}/>
         </section>
      );
 }
