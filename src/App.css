@@ -9,6 +9,7 @@ body {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 .topSection{
   display: flex;
@@ -17,11 +18,23 @@ body {
   padding: 10px;
   
 }
+.addButton{
+  background-color: violet;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.cancelButton{
+  background-color: rgb(233, 32, 58);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
 .bottomSection{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  
+  margin-bottom: 20px;
 }
 .bottomSection h2{
   border: 1px solid #e1e1e1;
@@ -37,7 +50,7 @@ body {
 }
 .lists{
   background-color: rgb(245, 240, 240);
-  width: 26rem;
+  width: 25rem;
   margin: 5px auto;
   display: grid;
   grid-template-columns: 15rem 5rem 5rem;
@@ -48,4 +61,36 @@ body {
 .lists p{
   word-wrap: break-word;
   
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 10rem;
+}
+.form input{
+  border: 1px solid blueviolet;
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+  transform: all 1s;
+  font-weight: bolder;
+  
+}
+.form input:focus{
+  border: 2px solid blueviolet;
+}
+.form button{
+  width: 200px;
+  margin: 2px auto;
+  color: white;
+  background-color: violet;
+  padding: 5px;
+  border-radius: 10px;
+  transition: all 1s;
+}
+.form button:hover{
+  color: white;
+  background-color: rgb(177, 39, 177);
 }

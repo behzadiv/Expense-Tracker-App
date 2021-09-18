@@ -23,7 +23,7 @@ const TransactionForm = ({ onAddTransaction }) => {
     amount: 0})
   };
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="form">
       <input type="text" name="desc" onChange={changeHandler} value={formValue.desc} placeholder="subject..." />
       <input type="number" name="amount" onChange={changeHandler} value={formValue.amount} />
       <div>
