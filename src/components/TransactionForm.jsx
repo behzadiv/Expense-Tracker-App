@@ -15,8 +15,6 @@ const TransactionForm = ({ onAddTransaction }) => {
     // console.log(cost);
     
     e.preventDefault();
-    //if(!formValue.desc || cost[0]==="0") return alert("please enter subject and 0 is not acceptable")
-    if(!formValue.desc) return alert("please enter subject")
     onAddTransaction(formValue);
     setFormValue({ type: "expense",
     desc: "",
@@ -24,8 +22,8 @@ const TransactionForm = ({ onAddTransaction }) => {
   };
   return (
     <form onSubmit={submitHandler} className="form">
-      <input type="text" name="desc" onChange={changeHandler} value={formValue.desc} placeholder="subject..." />
-      <input type="number" name="amount" onChange={changeHandler} value={formValue.amount} />
+      <input type="text" name="desc" onChange={changeHandler} value={formValue.desc} placeholder="subject..." className="input" required/>
+      <input type="number" name="amount" onChange={changeHandler} value={formValue.amount} className="input" required/>
       <div>
         <input
           type="radio"

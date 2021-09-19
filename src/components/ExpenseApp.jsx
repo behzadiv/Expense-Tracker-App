@@ -20,15 +20,19 @@ const ExpenseApp = () => {
     };
     const deleteTransaction=(id)=>{
         
-        const newTransaction =filteredTransaction.filter((t)=> t.id !==id)
-        setFilteredTransaction(newTransaction)
-          const index = transactions.findIndex((t)=>t.id===id)
+        const newTransaction =transactions.filter((t)=> t.id !==id)
+        setTransactions(newTransaction)
+        
+        const index = transactions.findIndex((t)=>t.id===id)
         const deleteAmount = transactions[index].amount
         if (transactions[index].type === "income")
           setIncome(JSON.parse(income) - JSON.parse(deleteAmount));
         else setExpense( JSON.parse(expense) - JSON.parse(deleteAmount));
     }
-    
+    const searchTransaction=(searchValue)=>{
+        const newTransaction = transactions.filter((t)=>t.desc.includes(searchValue))
+        setFilteredTransaction(newTransaction)
+    }
   return (
     <div>
       <OverWiewComponent
@@ -37,6 +41,7 @@ const ExpenseApp = () => {
         onAddTransaction2={addTransactionHandler}
         transactions={filteredTransaction}
         deleteTransaction={deleteTransaction}
+        searchTransaction={searchTransaction}
       />
     </div>
   );
