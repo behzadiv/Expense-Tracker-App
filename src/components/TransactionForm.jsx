@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TransactionForm = ({ onAddTransaction }) => {
+const TransactionForm = ({ onAddTransaction ,setIsShow}) => {
   const [formValue, setFormValue] = useState({
     type: "expense",
     desc: "",
@@ -13,7 +13,7 @@ const TransactionForm = ({ onAddTransaction }) => {
   const submitHandler = (e) => {
     // const cost =formValue.amount.split("")
     // console.log(cost);
-    
+    setIsShow(false)
     e.preventDefault();
     onAddTransaction(formValue);
     setFormValue({ type: "expense",

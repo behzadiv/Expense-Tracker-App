@@ -30,7 +30,7 @@ const ExpenseApp = () => {
         else setExpense( JSON.parse(expense) - JSON.parse(deleteAmount));
     }
     const searchTransaction=(searchValue)=>{
-        const newTransaction = transactions.filter((t)=>t.desc.includes(searchValue))
+        const newTransaction = transactions.filter((t)=>t.desc.toLowerCase().includes(searchValue))
         setFilteredTransaction(newTransaction)
     }
   return (

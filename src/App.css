@@ -57,7 +57,7 @@ body {
   
 }
 .bottomSection span{
-  color: red;
+  
   margin-top: 10px;
 }
 .lists{
@@ -99,7 +99,7 @@ body {
   outline: none;
   transform: all 1s;
   font-size: 1.4rem;
-  width: 15rem;
+  width: 80%;
   height: 1.5rem;
   margin:2px auto;
 }
@@ -108,10 +108,10 @@ body {
   border: 3px solid blueviolet;
 }
 .form button{
-  width: 200px;
+  width: 90%;
   margin: 10px auto;
   color: white;
-  background-color: violet;
+  background-color: rgb(138, 98, 231);
   padding: 5px;
   border-radius: 10px;
   transition: all 1s;

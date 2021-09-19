@@ -1,7 +1,8 @@
 const SearchComponent = ({searchTransaction}) => {
     const changeHandler=(e)=>{
         console.log(e.target.value);
-        searchTransaction(e.target.value)
+        searchTransaction((e.target.value).toLowerCase())
+        
     }
     return ( 
         <div className="search">
