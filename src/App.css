@@ -126,7 +126,7 @@ body {
 .search input{
   border: 2px solid blueviolet;
   outline: none;
-  padding: 5px 20px;
+  padding: 5px 21px;
   border-radius: 10px;
   margin-bottom: 15px;
   width: 12rem;
